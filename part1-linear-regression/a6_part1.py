@@ -11,7 +11,7 @@ y = data["Blood Pressure"].values
 x = x.reshape(-1,1)
 
 # Create the model
-
+plt.figure(figsize=(6,4))
 # Find the coefficient, bias, and r squared values. 
 # Each should be a float and rounded to two decimal places. 
 
@@ -22,3 +22,9 @@ x = x.reshape(-1,1)
 # Print out the prediction
 
 # Create the model in matplotlib and include the line of best fit
+plt.scatter(x,y)
+plt.xlabel("Age")
+plt.ylabel("Blood Pressure")
+plt.title("Blood Pressure By Age")
+print(f"Correlation between Age and Blood Pressure: {x.corr(y)}")
+plt.show()
